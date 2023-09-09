@@ -24,7 +24,7 @@ Route::group(['namespace'=>'App\Http\Controllers\admin','prefix'=>'/admin','as'=
     // customer
     Route::get('/**','customer\indexController@index')->name('customer');
     Route::get('/**/**','customer\indexController@create')->name('customer.create');
-    Route::POST('/**/kaydet','customer\indexController@store')->name('customer.store');
+    Route::POST('/**/**','customer\indexController@store')->name('customer.store');
     Route::GET('/**/**/{**}','customer\indexController@edit')->name('customer.edit');
     Route::POST('/**/**/{**}','customer\indexController@update')->name('customer.update');
     Route::GET('/**/{**}','customer\indexController@detail')->name('customer.detail');
@@ -39,14 +39,14 @@ Route::group(['namespace'=>'App\Http\Controllers\admin','prefix'=>'/admin','as'=
     Route::GET('/**/**','pay\indexController@create')->name('pay.create');
     Route::GET('/**/**/{**}','pay\indexController@create**')->name('pay.create');
     Route::POST('/**/**','pay\indexController@store')->name('pay.store');
-    Route::GET('/**/detay/{**}','pay\indexController@detail')->name('pay.detail');
+    Route::GET('/**/**/{**}','pay\indexController@detail')->name('pay.detail');
     // Route::GET('/**/sil/{**}','pay\indexController@delete')->name('pay.delete');
-    // gib
-    Route::get('/**/gib/{**}','gib\indexController@index')->name('gib');
-    Route::POST('/**/gib','gib\indexController@update')->name('gib.update');
-    // sgk
-    Route::get('/**/sgk/{**}','sgk\indexController@index')->name('sgk');
-    Route::POST('/**/sgk','sgk\indexController@update')->name('sgk.update');
+    // **
+    Route::get('/**/**/{**}','**\indexController@index')->name('**');
+    Route::POST('/**/**','**\indexController@update')->name('**.update');
+    // **
+    Route::get('/**/**/{**}','**\indexController@index')->name('**');
+    Route::POST('/**/**','**\indexController@update')->name('**.update');
     // notebook
     Route::get('/**','notebook\indexController@index')->name('notebook');
     Route::get('/**/**/{**}','notebook\indexController@edit')->name('notebook.edit');
